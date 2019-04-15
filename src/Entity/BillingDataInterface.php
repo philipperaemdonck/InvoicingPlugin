@@ -12,13 +12,13 @@ interface BillingDataInterface
 
     public function lastName(): string;
 
-    public function countryCode(): string;
+    public function countryCode(): ?string;
 
-    public function street(): string;
+    public function street(): ?string;
 
-    public function city(): string;
+    public function city(): ?string;
 
-    public function postcode(): string;
+    public function postcode(): ?string;
 
     public function provinceCode(): ?string;
 

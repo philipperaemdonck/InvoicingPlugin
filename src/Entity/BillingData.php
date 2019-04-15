@@ -21,7 +21,7 @@ class BillingData implements BillingDataInterface, ResourceInterface
     /** @var string|null */
     private $company;
 
-    /** @var string */
+    /** @var string|null */
     private $countryCode;
 
     /** @var string|null */
@@ -30,22 +30,22 @@ class BillingData implements BillingDataInterface, ResourceInterface
     /** @var string|null */
     private $provinceName;
 
-    /** @var string */
+    /** @var string|null */
     private $street;
 
-    /** @var string */
+    /** @var string|null */
     private $city;
 
-    /** @var string */
+    /** @var string|null */
     private $postcode;
 
     public function __construct(
         string $firstName,
         string $lastName,
-        string $countryCode,
-        string $street,
-        string $city,
-        string $postcode,
+        ?string $countryCode = null,
+        ?string $street = null,
+        ?string $city = null,
+        ?string $postcode = null,
         ?string $provinceCode = null,
         ?string $provinceName = null,
         ?string $company = null
@@ -81,22 +81,22 @@ class BillingData implements BillingDataInterface, ResourceInterface
         return $this->lastName;
     }
 
-    public function countryCode(): string
+    public function countryCode(): ?string
     {
         return $this->countryCode;
     }
 
-    public function street(): string
+    public function street(): ?string
     {
         return $this->street;
     }
 
-    public function city(): string
+    public function city(): ?string
     {
         return $this->city;
     }
 
-    public function postcode(): string
+    public function postcode(): ?string
     {
         return $this->postcode;
     }
